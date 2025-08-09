@@ -95,8 +95,8 @@ else:
     #YAW EQUATIONS HERE
 print(roll)
 
-timer = time.time()
-dt = time.time() - timer
+timer = time.time() * 1000
+dt = (time.time() * 1000) - timer
 
 yaw = gyroZ * dt
 if yaw > 180:
@@ -132,8 +132,8 @@ while True:
 	    gyroY = read_raw_data(GYRO_YOUT_H)
 	    gyroZ = read_raw_data(GYRO_ZOUT_H)
 
-	    dt = time.time() - timer
-	    timer = time.time()
+	    dt = (time.time() * 1000) - timer
+	    timer = time.time() * 1000
 
 		#Insert equations for Yaw and add parts for the Z angles
 	    gyroXRate = gyroX/131
@@ -208,7 +208,7 @@ while True:
 	    #print("Roll Rate Of Change: " + str(gyroXAngle)+"   " +"Pitch Rate of Change: " + str(gyroYAngle)+"   " +"Yaw Rate of Change: " + str(gyroZAngle))
 	    #print("Roll Component Angle: " + str(compAngleX)+"   " +"Pitch Component Angle: " + str(compAngleY)+"   " +"Yaw Component Angle: " + str(compAngleZ))
 	    #print(str(roll)+"  "+str(gyroXAngle)+"  "+str(compAngleX)+"  "+str(kalAngleX)+"  "+str(pitch)+"  "+str(gyroYAngle)+"  "+str(compAngleY)+"  "+str(kalAngleY))
-	    time.sleep(0.01)
+	    time.sleep(0.1)
 
 	except Exception as exc:
 		flag += 1
