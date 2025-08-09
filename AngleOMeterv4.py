@@ -208,7 +208,7 @@ while True:
 	    #print("Roll Rate Of Change: " + str(gyroXAngle)+"   " +"Pitch Rate of Change: " + str(gyroYAngle)+"   " +"Yaw Rate of Change: " + str(gyroZAngle))
 	    #print("Roll Component Angle: " + str(compAngleX)+"   " +"Pitch Component Angle: " + str(compAngleY)+"   " +"Yaw Component Angle: " + str(compAngleZ))
 	    #print(str(roll)+"  "+str(gyroXAngle)+"  "+str(compAngleX)+"  "+str(kalAngleX)+"  "+str(pitch)+"  "+str(gyroYAngle)+"  "+str(compAngleY)+"  "+str(kalAngleY))
-	    time.sleep(0.1)
+	    time.sleep(0.01)
 
 	except Exception as exc:
 		flag += 1
