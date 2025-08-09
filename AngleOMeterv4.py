@@ -48,7 +48,7 @@ def MPU_Init():
 	bus.write_byte_data(DeviceAddress, CONFIG, int('0000110',2))
 
 	#Write to Gyro configuration register
-	bus.write_byte_data(DeviceAddress, GYRO_CONFIG, 24)
+	bus.write_byte_data(DeviceAddress, GYRO_CONFIG, 0)
 
 	#Write to interrupt enable register
 	bus.write_byte_data(DeviceAddress, INT_ENABLE, 1)
